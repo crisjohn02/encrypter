@@ -1,0 +1,25 @@
+{
+  "name": "crisjohn02/encrypter",
+  "description": "Column encrypter",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cris",
+      "email": "crisjohnreytarpin@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Crisjohn02\\Encrypter\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Crisjohn02\\Encrypter\\EncrypterServiceProvider"
+      ]
+    }
+  }
+}
