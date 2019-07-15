@@ -55,6 +55,21 @@ class Post extends Model
 }
 ```
 
+You can also use the `HasUuid` trait and make sure your model has `uuid` column
+```php
+<?php
+
+namespace App\YourNameSpace;
+
+use Illuminate\Database\Eloquent\Model;
+use Crisjohn02\Encrypter\Traits\HasUuid;
+
+class Post extends Model
+{
+    use HasUuid;
+}
+```
+
 ## Limitation
 _Do not use `Encryptable` trait in your user model, this will cause an error when creating new user._
 
