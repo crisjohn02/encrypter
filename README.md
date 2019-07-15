@@ -8,7 +8,7 @@ This package will automatically encrypt when storing and decrypt when retrieving
 composer require crisjohn02/encrypter
 ```
 
-##### Usage
+## Usage
 
 Create your user table with a `salt` column.
 
@@ -55,6 +55,6 @@ class Post extends Model
 }
 ```
 
-####Limitation
+## Limitation
 _Do not use `Encryptable` trait in your user model, this will cause an error when creating new user._
 
