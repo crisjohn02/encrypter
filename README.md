@@ -1,6 +1,6 @@
 # Laravel Two-Way Column Encryption
 
-##What this package is all about?
+## What this package is all about?
 This package will automatically encrypt when storing and decrypt when retrieving eloquent using the laravel encryption method. This can be useful when someone illegally downloaded the database and will render the data useless. The salt is user specific so all data cannot be decrypted in just one salt value. __Please note that once you lose the salt values the encrypted data cannot be decrypted again, so be careful when using this package.__
 
 ## Installation
