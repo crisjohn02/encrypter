@@ -8,6 +8,7 @@ This package will automatically encrypt when storing and decrypt when retrieving
 composer require crisjohn02/encrypter
 ```
 
+
 ##### Usage
 
 Create your user table with a `salt` column.

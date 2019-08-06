@@ -11,11 +11,9 @@ trait Encryptable
 
     protected static function bootEncryptable()
     {
-        //if (Auth::check()) {
-            static::creating(function($model) {
-                $model->encrypter = new Encrypter(Auth::user()->{config('encrypter.salt_column')});
-            });
-        //}
+          static::creating(function($model) {
+              $model->encrypter = new Encrypter(Auth::user()->{config('encrypter.salt_column')});
+          });
 
     }
 
