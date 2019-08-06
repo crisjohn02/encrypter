@@ -1,6 +1,6 @@
 # Laravel Two-Way Column Encryption
 
-##What this package is all about?
+## What this package is all about?
 This package will automatically encrypt when storing and decrypt when retrieving eloquent using the laravel encryption method. This can be useful when someone illegally downloaded the database and will render the data useless. The salt is user specific so all data cannot be decrypted in just one salt value. __Please note that once you lose the salt values the encrypted data cannot be decrypted again, so be careful when using this package.__
 
 ## Installation
@@ -8,8 +8,7 @@ This package will automatically encrypt when storing and decrypt when retrieving
 composer require crisjohn02/encrypter
 ```
 
-
-##### Usage
+## Usage
 
 Create your user table with a `salt` column.
 
@@ -47,7 +46,7 @@ use Crisjohn02\Encrypter\Traits\Encryptable;
 class Post extends Model
 {
     use Encryptable;
-    
+
     //Specify the encryptable columns
     protected $encryptables = [
         'title',
@@ -56,6 +55,20 @@ class Post extends Model
 }
 ```
 
-####Limitation
-_Do not use `Encryptable` trait in your user model, this will cause an error when creating new user._
+You can also use the `HasUuid` trait and make sure your model has `uuid` column
+```php
+<?php
 
+namespace App\YourNameSpace;
+
+use Illuminate\Database\Eloquent\Model;
+use Crisjohn02\Encrypter\Traits\HasUuid;
+
+class Post extends Model
+{
+    use HasUuid;
+}
+```
+
+## Limitation
+_Do not use `Encryptable` trait in your user model, this will cause an error when creating new user._
